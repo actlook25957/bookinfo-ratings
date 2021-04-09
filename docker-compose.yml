@@ -1,7 +1,7 @@
 services:
   ratings:
     build: .
-    image: ghcr.io/actlook25957/bookinfo-ratings:uat
+    image: ghcr.io/actlook25957/bookinfo-ratings:dev
     ports:
       - "8080:8080"
     environment:
