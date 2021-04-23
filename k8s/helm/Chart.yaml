@@ -3,7 +3,7 @@ description: Bookinfo Ratings Service Helm Chart
 name: bookinfo-ratings
 version: 1.0.0
 appVersion: 1.0.0
-home: https://bookinfo.opsta.net/student27/ratings
+home: https://bookinfo.dev.opsta.net/student27/ratings
 maintainers:
   - name: student27
     email: devop027@mail.kmutt.ac.th
