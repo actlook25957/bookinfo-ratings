@@ -43,13 +43,11 @@ jobs:
           value-files: k8s/helm-values/values-bookinfo-${{ env.ENV_NAME }}-ratings.yaml
           values: |
             {
-              "extraEnv": {
+              "extraEnv": { 
                 "COMMIT_SHA": "${{ github.sha }}"
               }
             }
   acceptance-test:
     needs: deploy
     runs-on: ubuntu-20.04
-    steps:
-      - name: Acceptance Test
-        run: curl http://bookinfo./$%7B%7B env.ENV_NAME }}.opsta.net/student27/ratings/health | grep "Ratings is working"
+
