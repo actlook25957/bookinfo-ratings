@@ -25,7 +25,6 @@ jobs:
     needs: build
     runs-on: ubuntu-20.04
     steps:
-      - name: Set env
       - name: Checkout code
         uses: actions/checkout@v2
       - name: get-credentials
@@ -34,7 +33,7 @@ jobs:
           cluster_name: k8s
           location: asia-southeast1-a
           credentials: ${{ secrets.GKE_CREDENTIALS }}
-- name: deploy
+      - name: deploy
         uses: deliverybot/helm@v1
         with:
           helm: helm3
@@ -52,6 +51,5 @@ jobs:
     needs: deploy
     runs-on: ubuntu-20.04
     steps:
-      - name: Set env
       - name: Acceptance Test
-        run: curl http://bookinfo.${{ env.ENV_NAME }}.opsta.net/student27/ratings/health | grep "Ratings is working"
+        run: curl http://bookinfo./$%7B%7B env.ENV_NAME }}.opsta.net/student27/ratings/health | grep "Ratings is working"
