@@ -41,4 +41,4 @@ acceptance-test:
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout health check page
-        run: curl http://bookinfo.opsta.net/student54/ratings/health | grep "Ratings is working!!!"            
+        run: curl http://bookinfo.opsta.net/student27/ratings/health | grep "Ratings is working!!!"            
