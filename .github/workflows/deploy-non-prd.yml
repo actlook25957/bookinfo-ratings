@@ -25,6 +25,7 @@ jobs:
     needs: build
     runs-on: ubuntu-20.04
     steps:
+      - name: Set env
       - name: Checkout code
         uses: actions/checkout@v2
       - name: get-credentials
@@ -51,5 +52,6 @@ jobs:
     needs: deploy
     runs-on: ubuntu-20.04
     steps:
+      - name: Set env
       - name: Acceptance Test
         run: curl http://bookinfo.${{ env.ENV_NAME }}.opsta.net/student27/ratings/health | grep "Ratings is working"
